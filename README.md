@@ -13,16 +13,6 @@ MediChat is an AI-powered healthcare chatbot designed to provide general health 
 - 🔒 Safety-focused responses (no diagnosis, only guidance)  
 - 🔄 Seamless frontend-backend communication via REST API  
 
----
-
-## 🏗️ Project Structure
-MediChat/
-├── backend/
-│ └── main.py # FastAPI backend (Gemini API integration)
-└── frontend/
-├── index.html # UI layout
-├── style.css # Styling
-└── script.js # Chat logic
 
 ---
 
