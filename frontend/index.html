@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediChat – Health Support Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <div class="shell">
+
+        <!-- Header -->
+        <div class="header">
+            <div class="header-inner">
+                <div class="header-avatar">🩺</div>
+                <div class="header-text">
+                    <h1>MediChat</h1>
+                    <p>Health Support Assistant</p>
+                </div>
+                <div class="status-dot">
+                    <div class="dot"></div>
+                    Online
+                </div>
+            </div>
+        </div>
+
+        <!-- Emergency Banner -->
+        <div class="emergency-banner" id="emergencyBanner">
+            ⚠️ Emergency detected — please call emergency services immediately!
+        </div>
+
+        <!-- Messages -->
+        <div class="messages" id="chatMessages">
+            <div class="msg-row bot">
+                <div class="msg-avatar">🩺</div>
+                <div class="bubble">
+                    <span class="tag">Welcome</span><br>
+                    <strong>Hi there! I'm MediChat 👋</strong><br>
+                    I can help with general health information — symptoms, self-care tips, and when to see a doctor.<br><br>
+                    <em>I'm not a doctor and can't diagnose you</em>, but I'm here to help you understand your health better. What's on your mind?
+                </div>
+                <div class="ts" id="welcomeTs"></div>
+            </div>
+        </div>
+
+        <!-- Quick Chips -->
+        <div class="chips-wrap">
+            <div class="chips-label">Quick topics</div>
+            <div class="chips" id="chipRow">
+                <button class="chip" onclick="chipSend('I have a headache')">🤕 Headache</button>
+                <button class="chip" onclick="chipSend('I have a fever')">🌡️ Fever</button>
+                <button class="chip" onclick="chipSend('I have a cold or flu')">🤧 Cold & Flu</button>
+                <button class="chip" onclick="chipSend('I have a sore throat')">😮 Sore Throat</button>
+                <button class="chip" onclick="chipSend('I have stomach issues or nausea')">🤢 Stomach</button>
+                <button class="chip" onclick="chipSend('I have a cough')">😮‍💨 Cough</button>
+                <button class="chip" onclick="chipSend('I have allergies')">🌿 Allergies</button>
+                <button class="chip" onclick="chipSend('I feel anxious or stressed')">🧠 Anxiety</button>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area">
+            <div class="input-row">
+                <div class="input-wrap">
+                    <input type="text" id="userInput" placeholder="Describe your symptoms…" autocomplete="off">
+                </div>
+                <button class="send-btn" id="sendBtn" title="Send">➤</button>
+                <button class="sos-btn" id="emergencyBtn" title="Emergency Resources">SOS</button>
+            </div>
+            <div class="disclaimer">
+                ⚕️ General information only · Not a medical diagnosis · Always consult a qualified doctor
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
